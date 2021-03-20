@@ -1,0 +1,31 @@
+
+<div class="createNotePageLayout">
+    <div class="createNoteField">
+        <p-fieldset legend="File Name">
+            <button type="button" pButton icon="pi pi-bars" label="Menu" (click)="menu.toggle($event)"></button>
+            <p-menu #menu [popup]="true" [model]="items"></p-menu>
+            <textarea [rows]="30" pInputTextarea style="width: 100%"></textarea>
+        </p-fieldset>
+    </div>   
+     
+    <div class="customizationFields">
+        <p-fieldset legend="Sticky Note">
+            <div class="descriptionLabel">Draft ideas here</div>
+            <textarea [rows]="15" pInputTextarea style="width: 100%; background-color: #FFFF88"></textarea>
+        </p-fieldset>
+
+        <p-fieldset legend="Colors">
+            <div class="colorChoiceContainer">
+                <div class="textColorContainer">
+                    <div class="descriptionLabel">Text Color</div>
+                    <p-colorPicker [inline]="true"></p-colorPicker>
+                </div>
+
+                <div class="highlighterColorContainer">
+                    <div class="descriptionLabel">Highlighter Color</div>
+                    <p-colorPicker [inline]="true"></p-colorPicker>
+                </div>
+            </div> 
+        </p-fieldset>
+    </div>  
+</div>

@@ -1,0 +1,40 @@
+.createNotePageLayout {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1;
+    padding: 5rem;
+    height: 100vh;
+}
+
+.createNoteField {
+    flex-grow: 2;
+}
+
+.customizationFields {
+    flex-grow: 1;
+    max-width: 30%;
+}
+
+.descriptionLabel {
+    font-size: 1.25rem;
+    color: gray;
+    padding-bottom: 0.5rem;
+    padding-top: 0.2rem;
+}
+
+.colorChoiceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0.8rem;
+}
+
+.highlighterColorContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.textColorContainer {
+    display: flex;
+    flex-direction: column;
+}
