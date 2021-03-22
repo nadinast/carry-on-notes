@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  envName: 'prod',
+  apiUrl: 'https://carry-on-notes-backend.herokuapp.com/'
 };
