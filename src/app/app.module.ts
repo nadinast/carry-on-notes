@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { CreateNoteComponent } from './create-note/create-note.component';
+import { NotesListComponent } from './notes-list/notes-list.component';
 
 import {TabMenuModule} from 'primeng/tabmenu';
 import {ToolbarModule} from 'primeng/toolbar';
@@ -17,10 +22,8 @@ import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {ChipModule} from 'primeng/chip';
 import {AvatarModule} from 'primeng/avatar';
-
-import { HomeComponent } from './home/home.component';
-import { CreateNoteComponent } from './create-note/create-note.component';
-import { NotesListComponent } from './notes-list/notes-list.component';
+import {InputTextModule} from 'primeng/inputtext';
+import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { NotesListComponent } from './notes-list/notes-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     TabMenuModule,
     ToolbarModule,
     MenubarModule,
@@ -44,7 +49,9 @@ import { NotesListComponent } from './notes-list/notes-list.component';
     ButtonModule,
     TableModule,
     ChipModule,
-    AvatarModule
+    AvatarModule,
+    InputTextModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

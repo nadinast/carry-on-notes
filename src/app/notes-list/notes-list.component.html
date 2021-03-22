@@ -1,11 +1,12 @@
 <div class="notesPageLayout">
     <div class="tableCard">
         <p-card [style]="{'height': '100vh'}">
+            <ng-template pTemplate="header">
             <p-table [value]="notes" styleClass="p-datatable-striped"  [scrollable]="true">
                 <ng-template pTemplate="colgroup">
                     <colgroup>
-                        <col style="width:25%">
-                        <col style="width:25%">
+                        <col style="width:20%">
+                        <col style="width:30%">
                         <col style="width:20%">
                         <col style="width:30%">
                     </colgroup>
@@ -25,6 +26,7 @@
                         <td>
                             <p-avatar 
                                 shape="circle" 
+                                [label]="note.hasDraft ? 'Y' : 'N'"
                                 [style]="{'background-color': note.hasDraft ? '#fab710': '#689F38'}">
                             </p-avatar>
                         </td>
@@ -53,6 +55,7 @@
                     </tr>
                 </ng-template>
             </p-table>
+        </ng-template>
         </p-card>
     </div>
     <div class="chartCard">
@@ -60,7 +63,7 @@
             <ng-template pTemplate="header">
                 <div class="notePreviewLabel">Note Preview</div>
             </ng-template>
-            <div *ngIf="noteSelectedForPreview">
+            <div *ngIf="noteSelectedForPreview" class="notePreviewTextArea">
                 {{notePreviewTextToDisplay}}
             </div>
         </p-card>

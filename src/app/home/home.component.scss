@@ -1,9 +1,57 @@
 .pageLayout {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.topSection {
+    padding-top: 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.loginDescriptionI {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+}
+
+.loginDescriptionII {
+    text-align: center;
+    font-size: 1.5rem;
+    color: gray;
+    padding-top: 0.25rem;
+    padding-left: 4rem;
+}
+
+.loginCard {
+    width: 25%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.registerText {
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.registerCard {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+}
+
+.appDescription {
+    font-size: 1.25rem;
+    padding: 3rem 4rem 0;
+}
+
+
+.cardsLayout {
+    display: flex;
     width: 100%;
     justify-content: space-evenly;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 .descriptionCard {
@@ -17,3 +65,4 @@ img {
 .descriptionText {
     text-align: left;
 }
+

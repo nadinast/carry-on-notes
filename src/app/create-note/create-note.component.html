@@ -4,14 +4,14 @@
         <p-fieldset legend="File Name">
             <button type="button" pButton icon="pi pi-bars" label="Menu" (click)="menu.toggle($event)"></button>
             <p-menu #menu [popup]="true" [model]="items"></p-menu>
-            <textarea [rows]="30" pInputTextarea style="width: 100%"></textarea>
+            <textarea [rows]="30" pInputTextarea style="width: 100%" [(ngModel)]="note.text"></textarea>
         </p-fieldset>
     </div>   
      
     <div class="customizationFields">
         <p-fieldset legend="Sticky Note">
             <div class="descriptionLabel">Draft ideas here</div>
-            <textarea [rows]="15" pInputTextarea style="width: 100%; background-color: #FFFF88"></textarea>
+            <textarea [rows]="15" pInputTextarea style="width: 100%; background-color: #FFFF88" [(ngModel)]="draft"></textarea>
         </p-fieldset>
 
         <p-fieldset legend="Colors">
@@ -29,3 +29,23 @@
         </p-fieldset>
     </div>  
 </div>
+<p-dialog 
+    header="Save your note" 
+    [(visible)]="displaySaveMenu" 
+    [breakpoints]="{'960px': '50vw'}" 
+    [style]="{width: '25vw'}" 
+    [baseZIndex]="10000" 
+    [draggable]="false" 
+    [resizable]="false">
+    
+    <div class="saveMenu">
+        <label for="filenameInput">Note Name</label>
+        <input pInputText id="filenameInput" [(ngModel)]="note.name" [disabled]="!canNoteNameChange">
+    </div>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple (click)="saveNote()" label="Save" icon="pi pi-save" class="p-button-raised p-button-success"></button>
+        <button pButton pRipple (click)="closeSaveMenu()" label="Cancel" icon="pi pi-times" class="p-button-raised p-button-info"></button>
+    </ng-template>
+
+</p-dialog>

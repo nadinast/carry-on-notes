@@ -2,7 +2,7 @@
     padding-top: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .tableCard {
@@ -13,9 +13,15 @@
 }
 
 .notePreviewLabel {
-    color: gray;
     font-size: 1.25rem;
-    padding: 2rem;
+    font-weight: 400;
+    padding: 0.85rem 2rem;
+    background-color: peachpuff;
+}
+
+.notePreviewTextArea {
+    width: 100%;
+    margin: 0 1rem;
 }
 
 .actionButtons {
